@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hamburguesa  🍔</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- MENÚ SUPERIOR -->
+  <nav>
+    <div class="logo"> zona burger</div>
+    <div class="menu-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#complementos">Otros</a>
+      <a href="#inicio">Información</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="acciones">
+      <form class="buscador" id="busqueda-form">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <button type="submit"></button>
+      </form>
+      <span class="carrito"></span>
+    </div>
+  </nav>
+
+  <!-- RESULTADO DE BÚSQUEDA -->
+  <div id="resultado-busqueda"></div>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <section class="hero">
+  <div class="hero-imagen">
+    <img src="imagenes/hamburguesa de presentacion.webp" alt="Hamburguesa principal">
+  </div>
+  <div class="hero-info">
+    <h2>La zona burger</h2>
+    <p>
+      Disfruta nuestra hamburguesa más pedida, con carne 100% Angus,
+      queso cheddar derretido, tocino crocante y nuestra salsa secreta.
+      ¡Sabor que conquista al primer mordisco!
+    </p>
+  </div>
+</section>
+
+
+  <!-- CLÁSICAS -->
+  <section id="pollo">
+    <h2> las de pollo</h2>
+    <div class="galeria">
+      <div class="card" data-nombre="clasica"><img src="imagenes/hamburguesa de pollo.webp"><h3>WHOPPER® Grande</h3><p>S/ 16.90</p></div>
+      <div class="card" data-nombre="cheese"><img src="imagenes/hamburguesa de pollo 2.webp"><h3>WHOPPER® Cheese Grande</h3><p>S/ 16.90</p></div>
+      <div class="card" data-nombre="doble"><img src="imagenes/hamburguesa de pollo 3.webp"><h3>WHOPPER® Crispy Grande</h3><p>S/ 14.90</p></div>
+      <div class="card" data-nombre="bacon"><img src="imagenes/nuggets.webp"><h3>10 nuggets</h3><p>S/ 15.90</p></div>
+    </div>
+  </section>
+
+  <!-- VEGETALES -->
+  <section id="vegetales">
+    <h2> Las de vegetales</h2>
+    <p class="descripcion-seccion">
+    <div class="galeria">
+      <div class="card" data-nombre="vegana1">
+        <img src="imagenes/hamburguesa vegetal.webp" alt="Veggie Clásica">
+        <h3>WHOPPER® Vegetal</h3>
+        <p>S/ 19.90</p>
+      </div>
+      <div class="card" data-nombre="vegana2">
+        <img src="imagenes/hamburguesa vegetal 2.webp" alt="Veggie BBQ">
+        <h3>WHOPPER® Vegetal con Queso</h3>
+        <p>S/ 21.90</p>
+      </div>
+      <div class="card" data-nombre="vegana3">
+        <img src="imagenes/hamburguesa vegetal 3.webp" alt="Veggie Picante">
+        <h3>WHOPPER® Vegetal Tejana</h3>
+        <p>S/ 23.90</p>
+      </div>
+      <div class="card" data-nombre="vegana4">
+        <img src="imagenes/hamburguesa vegetal 4.webp" alt="Veggie Deluxe">
+        <h3>WHOPPER® Vegetal Crispy</h3>
+        <p>S/ 22.90</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLEMENTOS -->
+  <section id="complementos">
+    <h2> Complementos</h2>
+    <div class="galeria">
+      <div class="card" data-nombre="inca"><img src="imagenes/inka kola.webp"><h3>Inca Kola</h3><p>S/ 8.00</p></div>
+      <div class="card" data-nombre="coca"><img src="imagenes/coca cola.webp"><h3>Coca-Cola</h3><p>S/ 8.00</p></div>
+      <div class="card" data-nombre="papas1"><img src="imagenes/papa familiar.webp"><h3>Papa familiar </h3><p>S/ 9.50</p></div>
+      <div class="card" data-nombre="papas2"><img src="imagenes/papa jr.webp"><h3>Papa jr </h3><p>S/ 4.90</p></div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN FINAL -->
+  <div class="info-final" id="contacto">
+    <h2>NUESTROS SERVICIOS</h2>
+    <div class="contenedor-columnas">
+      <div class="columna" style="text-align: left;">
+        <h3>INFORMACIÓN</h3>
+        <p>
+         POLLO VEGGIE BURGER :<br>
+        El auténtico sabor del pollo… sin pollo. <br>
+        Hamburguesas 100% vegetales, sin combos. <br>
+        Elige tus complementos y crea tu combinación perfecta. <br>
+        ¡DALE Y NO TE LO PIERDAS!
+        </p>
+      </div>
+
+      <div class="columna"> 
+        <h3>REDES SOCIALES</h3>
+        <div class="redes-img">
+          <img src="imagenes/facebook.png" alt="Facebook">
+          <img src="imagenes/tik tok.webp" alt="Instagram">
+          <img src="imagenes/whasap.avif" alt="TikTok">
+        </div>
+      </div>
+
+      <div class="columna" style="text-align: right;">
+        <h3>¿LISTO PARA ORDENAR?</h3>
+        <p>ACEPTAMOS PAGO CON TARJETA DE CRÉDITO Y YAPE </p>
+        <div class="pagos">
+          <img src="imagenes/yape.png">
+          <img src="imagenes/AMXCLL.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT DE BÚSQUEDA -->
+  <script>
+    const form = document.getElementById('busqueda-form');
+    const input = document.getElementById('busqueda');
+    const cards = document.querySelectorAll('.card');
+    const resultado = document.getElementById('resultado-busqueda');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const texto = input.value.toLowerCase().trim();
+      let encontrado = false;
+
+      cards.forEach(card => {
+        const nombre = card.getAttribute('data-nombre').toLowerCase();
+        const visible = nombre.includes(texto);
+        card.style.display = visible ? 'block' : 'none';
+        if (visible) {
+          resultado.textContent = `🔍 Resultado: ${card.querySelector('h3').textContent}`;
+          encontrado = true;
+        }
+      });
+
+      if (!encontrado) {
+        resultado.textContent = `❌ No se encontró ninguna hamburguesa con "${texto}"`;
+      }
+    });
+  </script>
+
+</body>
+</html>
